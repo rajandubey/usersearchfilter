@@ -50,6 +50,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
+import { HttpServicesService } from './http-services.service';
 
 const routers: Routes = [
   {
@@ -121,6 +122,7 @@ const routers: Routes = [
     BrowserAnimationsModule
   ],
   declarations: [AppComponent, UsersComponent, ToDosComponent, AboutComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [HttpServicesService]
 })
 export class AppModule {}
