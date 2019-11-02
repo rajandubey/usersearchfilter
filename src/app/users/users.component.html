@@ -5,7 +5,7 @@
         <b>{{item.name}}</b> <br><br>
         <i class="material-icons">phone</i>  {{item.phone}} <br><br>
         <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> {{item.address.city}} <br><br>
-       <button mat-raised-button color="primary" [routerLink]="['']">View More</button>  
+       <button mat-raised-button color="primary" [routerLink]="['view',item.id]">View More</button>  
         
       </mat-card>
   </div>

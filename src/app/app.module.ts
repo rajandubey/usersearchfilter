@@ -55,6 +55,7 @@ import { HttpServicesService } from './http-services.service';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { SearchUserComponent } from './search-user/search-user.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 const routers: Routes = [
   {
     path: "",
@@ -71,6 +72,9 @@ const routers: Routes = [
   {
     path: "todo",
     component: ToDosComponent
+  },{
+    path:'view/:id',
+    component:ViewUserComponent
   }
 ];
 
@@ -125,7 +129,7 @@ const routers: Routes = [
     RouterModule.forRoot(routers),
     BrowserAnimationsModule
   ],
-  declarations: [AppComponent, UsersComponent, ToDosComponent, AboutComponent, SearchFilterPipe, SearchUserComponent],
+  declarations: [AppComponent, UsersComponent, ToDosComponent, AboutComponent, SearchFilterPipe, SearchUserComponent, ViewUserComponent],
   bootstrap: [AppComponent],
   providers: [HttpServicesService]
 })
