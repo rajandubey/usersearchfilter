@@ -1,6 +1,6 @@
 <app-search-user [(searchModel)]="searchModel"></app-search-user>
 <div class="row">
-  <div class="col-md-6 userList" *ngFor="let item of alluser" style="padding:2% 2%">
+  <div class="col-md-6 userList" *ngFor="let item of alluser  | searchFilter: searchModel" style="padding:2% 2%">
       <mat-card>
         <b>{{item.name}}</b> <br><br>
         <i class="material-icons">phone</i>  {{item.phone}} <br><br>
