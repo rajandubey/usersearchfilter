@@ -52,6 +52,7 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
 import { HttpServicesService } from './http-services.service';
 
+import {HttpClientModule} from '@angular/common/http';
 const routers: Routes = [
   {
     path: "",
@@ -73,6 +74,7 @@ const routers: Routes = [
 
 @NgModule({
   imports: [
+    HttpClientModule,
     A11yModule,
     CdkStepperModule,
     CdkTableModule,
