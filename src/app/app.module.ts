@@ -53,6 +53,8 @@ import { MatTreeModule } from "@angular/material/tree";
 import { HttpServicesService } from './http-services.service';
 
 import {HttpClientModule} from '@angular/common/http';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { SearchUserComponent } from './search-user/search-user.component';
 const routers: Routes = [
   {
     path: "",
@@ -123,7 +125,7 @@ const routers: Routes = [
     RouterModule.forRoot(routers),
     BrowserAnimationsModule
   ],
-  declarations: [AppComponent, UsersComponent, ToDosComponent, AboutComponent],
+  declarations: [AppComponent, UsersComponent, ToDosComponent, AboutComponent, SearchFilterPipe, SearchUserComponent],
   bootstrap: [AppComponent],
   providers: [HttpServicesService]
 })

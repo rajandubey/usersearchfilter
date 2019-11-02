@@ -15,6 +15,7 @@ export class UsersComponent implements OnInit {
     this.httpService.getAllUserList().subscribe(
       data =>{
         this.alluser = data;
+        //console.log(this.alluser)
       },
       error =>{
         console.log(error.errorMessage);

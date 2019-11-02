@@ -1,1 +1,12 @@
-<mat-card>Simple card</mat-card>
+<app-search-user [(searchModel)]="searchModel"></app-search-user>
+<div class="row">
+  <div class="col-md-6 userList" *ngFor="let item of alluser" style="padding:2% 2%">
+      <mat-card>
+        <b>{{item.name}}</b> <br><br>
+        <i class="material-icons">phone</i>  {{item.phone}} <br><br>
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> {{item.address.city}} <br><br>
+       <button mat-raised-button color="primary" [routerLink]="['']">View More</button>  
+        
+      </mat-card>
+  </div>
+</div>
