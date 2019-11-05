@@ -73,7 +73,7 @@ const routers: Routes = [
     path: "todo",
     component: ToDosComponent
   },{
-    path:'view/:id',
+    path:'users/view/:id',
     component:ViewUserComponent
   }
 ];
