@@ -11,4 +11,9 @@ export class HttpServicesService {
     return myResponse;
   }
 
+  getSingleUserInfo(userID):any{
+    let myResponse = this._http.get(this.baseUser+'users/'+userID);
+    return myResponse;
+  }
+
 }

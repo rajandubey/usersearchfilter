@@ -75,6 +75,9 @@ const routers: Routes = [
   },{
     path:'users/view/:id',
     component:ViewUserComponent
+  },{
+    path:'view/:id',
+    component:ViewUserComponent
   }
 ];
 
