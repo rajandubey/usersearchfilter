@@ -50,13 +50,13 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
-import { HttpServicesService } from './http-services.service';
+import { HttpServicesService } from "./http-services.service";
 
-import {HttpClientModule} from '@angular/common/http';
-import { SearchFilterPipe } from './search-filter.pipe';
-import { SearchUserComponent } from './search-user/search-user.component';
-import { ViewUserComponent } from './view-user/view-user.component';
-import { AddUserComponent } from './add-user/add-user.component';
+import { HttpClientModule } from "@angular/common/http";
+import { SearchFilterPipe } from "./search-filter.pipe";
+import { SearchUserComponent } from "./search-user/search-user.component";
+import { ViewUserComponent } from "./view-user/view-user.component";
+import { AddUserComponent } from "./add-user/add-user.component";
 const routers: Routes = [
   {
     path: "",
@@ -73,16 +73,14 @@ const routers: Routes = [
   {
     path: "todo",
     component: ToDosComponent
-  },{
-    path:'users/view/:id',
-    component:ViewUserComponent
-  },{
-    path:'view/:id',
-    component:ViewUserComponent
   },
   {
-    path:'add-user',
-    component:AddUserComponent
+    path: "view/:id",
+    component: ViewUserComponent
+  },
+  {
+    path: "add-user",
+    component: AddUserComponent
   }
 ];
 
@@ -137,7 +135,16 @@ const routers: Routes = [
     RouterModule.forRoot(routers),
     BrowserAnimationsModule
   ],
-  declarations: [AppComponent, UsersComponent, ToDosComponent, AboutComponent, SearchFilterPipe, SearchUserComponent, ViewUserComponent, AddUserComponent],
+  declarations: [
+    AppComponent,
+    UsersComponent,
+    ToDosComponent,
+    AboutComponent,
+    SearchFilterPipe,
+    SearchUserComponent,
+    ViewUserComponent,
+    AddUserComponent
+  ],
   bootstrap: [AppComponent],
   providers: [HttpServicesService]
 })
