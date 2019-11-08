@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Routes } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { HttpServicesService } from "../http-services.service";
+import {Location} from '@angular/common';
 
 @Component({
   selector: "app-view-user",
@@ -12,7 +13,9 @@ export class ViewUserComponent implements OnInit {
   public singleUser;
   constructor(
     private ac_router: ActivatedRoute,
-    private httpService: HttpServicesService
+    private httpService: HttpServicesService,
+    private _router:Router,
+    private location:Location
   ) {}
 
   ngOnInit() {
@@ -27,5 +30,9 @@ export class ViewUserComponent implements OnInit {
         console.log(error.errorMessage);
       }
     );
+  }
+
+  goBack(){
+    return this.location.back();
   }
 }
