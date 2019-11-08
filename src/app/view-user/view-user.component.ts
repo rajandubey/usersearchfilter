@@ -33,6 +33,6 @@ export class ViewUserComponent implements OnInit {
   }
 
   goBack(){
-    return this.location.back();
+    this.location.back();
   }
 }

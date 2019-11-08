@@ -1,4 +1,13 @@
-<app-search-user [(searchModel)]="searchModel"></app-search-user>
+<div class="row">
+  <div class="col-md-10">
+    <app-search-user [(searchModel)]="searchModel"></app-search-user>
+  </div>
+  <div class="col-md-2">
+      <button mat-raised-button color="warn">Add User</button>
+  </div>
+</div>
+
+
 <div class="row">
   <div class="col-md-6 userList" *ngFor="let item of alluser  | searchFilter: searchModel" style="padding:2% 2%">
       <mat-card>
