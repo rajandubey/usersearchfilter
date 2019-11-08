@@ -1,26 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpServicesService } from '../http-services.service';
+import { Component, OnInit } from "@angular/core";
+import { HttpServicesService } from "../http-services.service";
+
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: "app-users",
+  templateUrl: "./users.component.html",
+  styleUrls: ["./users.component.css"]
 })
 export class UsersComponent implements OnInit {
-
   alluser;
-  constructor(private httpService:HttpServicesService) { }
+  constructor(
+    private httpService: HttpServicesService
+  ) {}
 
   ngOnInit() {
     this.httpService.getAllUserList().subscribe(
-      data =>{
+      data => {
         this.alluser = data;
         //console.log(this.alluser)
       },
-      error =>{
+      error => {
         console.log(error.errorMessage);
       }
-    )
+    );
   }
-
 }
