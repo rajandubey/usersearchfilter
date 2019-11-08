@@ -2,11 +2,11 @@
     <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">First Name</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+      <input type="text" class="form-control" id="inputEmail4" placeholder="First Name"  #message>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Last Name</label>
-      <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+      <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name"  #action>
     </div>
   </div>
   <div class="form-row">
@@ -52,5 +52,6 @@
       </label>
     </div>
   </div>
- <button mat-raised-button color="primary">Add User</button>
+ <!-- <button mat-raised-button color="primary">Add User</button> -->
+ <button mat-raised-button color="primary" (click)="openSnackBar(message.value, 'User Added')">Add User</button>
 </form>

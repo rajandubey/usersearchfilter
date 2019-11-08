@@ -60,15 +60,12 @@ import { AddUserComponent } from "./add-user/add-user.component";
 const routers: Routes = [
   {
     path: "",
-    component: UsersComponent
+    component: UsersComponent,
+    pathMatch:'full'
   },
   {
     path: "about",
     component: AboutComponent
-  },
-  {
-    path: "users",
-    component: UsersComponent
   },
   {
     path: "todo",
