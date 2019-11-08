@@ -79,6 +79,10 @@ const routers: Routes = [
   },{
     path:'view/:id',
     component:ViewUserComponent
+  },
+  {
+    path:'add-user',
+    component:AddUserComponent
   }
 ];
 
