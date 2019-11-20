@@ -12,12 +12,13 @@ export class GithubUsersComponent implements OnInit {
   constructor(private _http:HttpServicesService) { }
 
   ngOnInit() {
+    this.getAallGithubUsers();
   }
 
   getAallGithubUsers(){
-    this._http.getAllGithubUsers.subscribe(  data=>{
+    this._http.getAllGithubUsers().subscribe(  data=>{
           this.getAallGithubUsers = data;
-          console.log(this.getAallGithubUsers)
+         console.log(this.getAallGithubUsers)
     },
     error =>{
       console.log(error.errorMessage)

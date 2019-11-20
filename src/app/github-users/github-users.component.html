@@ -1,0 +1,35 @@
+<!-- <div class="row">
+	<div class="col-md-4" *ngFor="let user of allgithubusers">
+		<mat-card class="example-card">
+			<mat-card-header>
+				<div mat-card-avatar class="example-header-image"></div>
+				<mat-card-title>{{user.login}}</mat-card-title>
+				<mat-card-subtitle>{{user.login}}</mat-card-subtitle>
+			</mat-card-header>
+			 <img mat-card-image [src]="user.url" alt="Photo of a Shiba Inu"> 
+			<mat-card-content>
+				<!-- <p>
+					The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+					A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+					bred for hunting.
+				</p> 
+			</mat-card-content>
+			<mat-card-actions>
+				<button mat-button>LIKE</button>
+				<button mat-button>SHARE</button>
+			</mat-card-actions> 
+		</mat-card>
+	</div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-6 userList" *ngFor="let item of allgithubusers  | searchFilter: searchModel" style="padding:2% 2%">
+      <mat-card>
+        <b>{{item.login}}</b> <br><br>
+        <!-- <i class="material-icons">phone</i>  {{item.phone}} <br><br>
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> {{item.address.city}} <br><br>
+       <button type="submit" mat-raised-button color="primary" [routerLink]="['view',item.id]">View More</button>   -->
+        
+      </mat-card>
+  </div>
+</div>
