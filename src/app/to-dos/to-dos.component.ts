@@ -17,7 +17,7 @@ export class ToDosComponent implements OnInit {
   loadAllToDos():any{
     this._http.getToDos().subscribe( data =>{
         this.allToDos = data;
-        console.log(this.allToDos)
+        //console.log(this.allToDos)
     },
     error =>{
         console.log(error.errorMessage);
