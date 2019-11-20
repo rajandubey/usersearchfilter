@@ -22,4 +22,12 @@ export class HttpServicesService {
     return myResponse;
   }
 
+
+  public githubUrl="https://api.github.com/"
+
+  getAllGithubUsers():any{
+    let myResponse = this._http.get(this.githubUrl+'users');
+    return myResponse;
+  }
+
 }

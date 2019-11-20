@@ -58,6 +58,7 @@ import { SearchUserComponent } from "./search-user/search-user.component";
 import { ViewUserComponent } from "./view-user/view-user.component";
 import { AddUserComponent } from "./add-user/add-user.component";
 import {NgxPaginationModule} from 'ngx-pagination';
+import { GithubUsersComponent } from './github-users/github-users.component';
 const routers: Routes = [
   {
     path: "",
@@ -79,6 +80,10 @@ const routers: Routes = [
   {
     path: "add-user",
     component: AddUserComponent
+  },
+  {
+    path: "github-users",
+    component: GithubUsersComponent
   }
 ];
 
@@ -142,7 +147,8 @@ const routers: Routes = [
     SearchFilterPipe,
     SearchUserComponent,
     ViewUserComponent,
-    AddUserComponent
+    AddUserComponent,
+    GithubUsersComponent
   ],
   bootstrap: [AppComponent],
   providers: [HttpServicesService]
