@@ -1,9 +1,10 @@
 <div class="row">
-	<div class="col-md-12" *ngFor="let todo of allToDos" style="padding:1% 1%">
+	<div class="col-md-12" *ngFor="let todo of allToDos | paginate: { itemsPerPage: 5, currentPage: p }" style="padding:1% 1%">
 		<mat-card>
 			<section class="example-section">
-				<mat-checkbox class="example-margin" >{{todo.title}}</mat-checkbox>
+				<mat-checkbox class="example-margin" [checked]="todo.completed" >{{todo.title}}</mat-checkbox>
 			</section>
 		</mat-card>
 	</div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

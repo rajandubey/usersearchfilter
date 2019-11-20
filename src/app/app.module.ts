@@ -57,6 +57,7 @@ import { SearchFilterPipe } from "./search-filter.pipe";
 import { SearchUserComponent } from "./search-user/search-user.component";
 import { ViewUserComponent } from "./view-user/view-user.component";
 import { AddUserComponent } from "./add-user/add-user.component";
+import {NgxPaginationModule} from 'ngx-pagination';
 const routers: Routes = [
   {
     path: "",
@@ -83,6 +84,7 @@ const routers: Routes = [
 
 @NgModule({
   imports: [
+    NgxPaginationModule,
     HttpClientModule,
     A11yModule,
     CdkStepperModule,
