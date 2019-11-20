@@ -16,9 +16,9 @@ export class GithubUsersComponent implements OnInit {
   }
 
   getAallGithubUsers(){
-    this._http.getAllGithubUsers().subscribe(  data=>{
-          this.getAallGithubUsers = data;
-         console.log(this.getAallGithubUsers)
+    this._http.getAllGithubUsers().subscribe(  data =>{
+          this.allgithubusers = data;
+         console.log(this.allgithubusers)
     },
     error =>{
       console.log(error.errorMessage)
