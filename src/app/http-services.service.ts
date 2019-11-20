@@ -16,4 +16,10 @@ export class HttpServicesService {
     return myResponse;
   }
 
+
+  getToDos():any{
+    let myResponse = this._http.get(this.baseUser+'todos');
+    return myResponse;
+  }
+
 }

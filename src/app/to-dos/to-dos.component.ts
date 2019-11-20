@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpServicesService } from "../http-services.service";
 
 @Component({
   selector: 'app-to-dos',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDosComponent implements OnInit {
 
-  constructor() { }
+  allToDos=[]
+  constructor(private _http:HttpServicesService) { }
 
   ngOnInit() {
+    this.loadAllToDos();
+  }
+  loadAllToDos():any{
+    this._http.getToDos().subscribe( data =>{
+        this.allToDos = data;
+        console.log(this.allToDos)
+    },
+    error =>{
+        console.log(error.errorMessage);
+    })
   }
 
 }
