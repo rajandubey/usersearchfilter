@@ -3,28 +3,36 @@
 
 		<mat-card class="example-card">
 			<mat-card-header>
-				<!-- <div mat-card-avatar class="example-header-image"></div> -->
+
 				<mat-card-title>{{singleBook.name}}</mat-card-title>
 				<mat-card-subtitle>{{singleBook.authors}}</mat-card-subtitle>
 			</mat-card-header>
-      
-
-			<!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+			<mat-divider></mat-divider>
 			<mat-card-content>
-        <br>
-				<!-- <p>
-					The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-					A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-					bred for hunting.
-				</p> -->
- 
-        <h5>Total Number of Pages : {{singleBook.numberOfPages}}</h5>
-        <h5>Publisher : {{singleBook.publisher}}</h5>
-        <h5>Country : {{singleBook.country}}</h5>
-        <h5>Released Date : {{singleBook.released | date}}</h5>
+				<br>
+				<h5>Total Number of Pages : {{singleBook.numberOfPages}}</h5>
+				<h5>Publisher : {{singleBook.publisher}}</h5>
+				<h5>Country : {{singleBook.country}}</h5>
+				<h5>Released Date : {{singleBook.released | date}}</h5>
 
 			</mat-card-content>
-     
+			<br>
+			<mat-divider></mat-divider>
+			<br>
+			<mat-accordion>
+				<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							Self aware panel
+						</mat-panel-title>
+						<mat-panel-description>
+							Currently I am {{panelOpenState ? 'open' : 'closed'}}
+						</mat-panel-description>
+					</mat-expansion-panel-header>
+					<p>I'm visible because I am open</p>
+				</mat-expansion-panel>
+			</mat-accordion>
+
 		</mat-card>
 	</div>
 </div>
