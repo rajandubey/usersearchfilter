@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col-md-4" *ngFor = "let book of allbooks"style="padding:2% 2%">
+
+		<mat-card class="example-card">
+			<mat-card-header>
+				<!-- <div mat-card-avatar class="example-header-image"></div> -->
+				<mat-card-title>{{book.name}}</mat-card-title>
+				<mat-card-subtitle>{{book.authors}}</mat-card-subtitle>
+			</mat-card-header>
+      <mat-divider></mat-divider>
+
+			<!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+			<mat-card-content>
+        <br>
+				<!-- <p>
+					The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+					A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+					bred for hunting.
+				</p> -->
+ 
+        <h5>Total Number of Pages : {{book.numberOfPages}}</h5>
+        <h5>Publisher : {{book.publisher}}</h5>
+        <h5>Country : {{book.country}}</h5>
+        <h5>Released Date : {{book.released | date}}</h5>
+
+			</mat-card-content>
+       <mat-divider></mat-divider>
+			<mat-card-actions>
+				<a mat-raised-button color="primary" [href]="book.url">Read More</a>
+				<button mat-raised-button color="warn">Buy Now</button>
+			</mat-card-actions>
+		</mat-card>
+	</div>
+</div>
+
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

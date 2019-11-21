@@ -59,6 +59,9 @@ import { ViewUserComponent } from "./view-user/view-user.component";
 import { AddUserComponent } from "./add-user/add-user.component";
 import {NgxPaginationModule} from 'ngx-pagination';
 import { GithubUsersComponent } from './github-users/github-users.component';
+
+import { BookStoreComponent } from './book-store/book-store.component';
+import { BookViewComponent } from './book-view/book-view.component';
 const routers: Routes = [
   {
     path: "",
@@ -84,6 +87,14 @@ const routers: Routes = [
   {
     path: "github-users",
     component: GithubUsersComponent
+  },
+  {
+    path: "book",
+    component: BookStoreComponent
+  },
+  {
+    path: "book/bookView/:bookId",
+    component: BookViewComponent
   }
 ];
 
@@ -148,7 +159,9 @@ const routers: Routes = [
     SearchUserComponent,
     ViewUserComponent,
     AddUserComponent,
-    GithubUsersComponent
+    GithubUsersComponent,
+    BookStoreComponent,
+    BookViewComponent
   ],
   bootstrap: [AppComponent],
   providers: [HttpServicesService]
