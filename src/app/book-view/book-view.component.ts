@@ -10,7 +10,7 @@ import { HttpServicesService } from "../http-services.service";
 export class BookViewComponent implements OnInit {
 
   public bookid;
-  public singleBook:any[]=[]
+  public singleBook;
   constructor(private _acRoute:ActivatedRoute, private http:HttpServicesService) { }
 
   ngOnInit() {
