@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-md-4" *ngFor = "let book of allbooks"style="padding:2% 2%">
+	<div class="col-md-4" *ngFor = "let book of allbooks ; let i = index"style="padding:2% 2%">
 
 		<mat-card class="example-card">
 			<mat-card-header>
@@ -26,7 +26,7 @@
 			</mat-card-content>
        <mat-divider></mat-divider>
 			<mat-card-actions>
-				<a mat-raised-button color="primary" [href]="book.url">Read More</a>
+				<a mat-raised-button color="primary" [routerLink]="['bookView',i+1]">Read More</a>
 				<button mat-raised-button color="warn">Buy Now</button>
 			</mat-card-actions>
 		</mat-card>

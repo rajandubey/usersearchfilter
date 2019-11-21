@@ -32,9 +32,14 @@ export class HttpServicesService {
 
 
   public bookUrl = "https://www.anapioficeandfire.com/api/books/"
-  
+
   getAllBooks():any{
     let myResponse = this._http.get(this.bookUrl);
+    return myResponse;
+  }
+
+  public getSingleBook(bookid):any{
+    let myResponse = this.bookUrl+bookid
     return myResponse;
   }
 
