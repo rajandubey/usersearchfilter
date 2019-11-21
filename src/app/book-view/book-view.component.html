@@ -16,23 +16,25 @@
 				<h5>Released Date : {{singleBook.released | date}}</h5>
 
 			</mat-card-content>
-			<br>
-			<mat-divider></mat-divider>
-			<br>
+		</mat-card>
+		<br>
+		<mat-card>
+			<mat-card-header>
+				<h1> Characters</h1>
+			</mat-card-header>
 			<mat-accordion>
-				<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+				<mat-expansion-panel>
 					<mat-expansion-panel-header>
 						<mat-panel-title>
 							Self aware panel
 						</mat-panel-title>
 						<mat-panel-description>
-							Currently I am {{panelOpenState ? 'open' : 'closed'}}
+
 						</mat-panel-description>
 					</mat-expansion-panel-header>
 					<p>I'm visible because I am open</p>
 				</mat-expansion-panel>
 			</mat-accordion>
-
 		</mat-card>
 	</div>
 </div>
