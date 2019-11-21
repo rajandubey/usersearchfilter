@@ -1,11 +1,11 @@
 <div class="row" *ngIf="singleBook">
-	<div class="col-md-12" *ngFor = "let book of singleBook" style="padding:2% 2%">
+	<div class="col-md-12" style="padding:2% 2%">
 
 		<mat-card class="example-card">
 			<mat-card-header>
 				<!-- <div mat-card-avatar class="example-header-image"></div> -->
-				<mat-card-title>{{book.name}}</mat-card-title>
-				<mat-card-subtitle>{{book.authors}}</mat-card-subtitle>
+				<mat-card-title>{{singleBook.name}}</mat-card-title>
+				<mat-card-subtitle>{{singleBook.authors}}</mat-card-subtitle>
 			</mat-card-header>
       
 
@@ -18,10 +18,10 @@
 					bred for hunting.
 				</p> -->
  
-        <h5>Total Number of Pages : {{book.numberOfPages}}</h5>
-        <h5>Publisher : {{book.publisher}}</h5>
-        <h5>Country : {{book.country}}</h5>
-        <h5>Released Date : {{book.released | date}}</h5>
+        <h5>Total Number of Pages : {{singleBook.numberOfPages}}</h5>
+        <h5>Publisher : {{singleBook.publisher}}</h5>
+        <h5>Country : {{singleBook.country}}</h5>
+        <h5>Released Date : {{singleBook.released | date}}</h5>
 
 			</mat-card-content>
      
