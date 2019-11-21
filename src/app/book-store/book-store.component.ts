@@ -8,7 +8,7 @@ import { HttpServicesService } from "../http-services.service";
 })
 export class BookStoreComponent implements OnInit {
 
-  allbooks=[];s
+  allbooks=[];
   constructor(private _http:HttpServicesService) { }
 
   ngOnInit() {

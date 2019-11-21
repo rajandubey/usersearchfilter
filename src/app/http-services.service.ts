@@ -39,7 +39,7 @@ export class HttpServicesService {
   }
 
   public getSingleBook(bookid):any{
-    let myResponse = this.bookUrl+bookid
+    let myResponse = this._http.get(this.bookUrl+bookid)
     return myResponse;
   }
 
